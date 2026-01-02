@@ -1,26 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Follow Compare</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
-    <h2>Upload Instagram Data</h2>
+    <section class="upload-section" id="uploadPage">
+        <div class="container">
+            <h1>Instagram Follow Checker</h1>
+            <p>Bandingkan followers dan following kamu</p>
 
-    <label>
-        Followers JSON:
-        <input type="file" id ="followersFile" accept=".json">
-    </label>
-    
-    <label>
-        Following JSON:
-        <input type="file" id ="followingFile" accept=".json">
-    </label>
+            <div class="upload-wrapper">
 
-    <br><br>
+                <div class="upload-card">
+                    <h3>Followers</h3>
+                    <label class="upload-box">
+                        <input type="file" id="followersFile" accept=".json" hidden>
+                        <span class="file-text" id="followersText">
+                            Pilih file followers
+                        </span>
+                    </label>
+                </div>
 
-    <button id="compareBtn">Compare</button>
-</body>
+                <div class="upload-card">
+                    <h3>Following</h3>
+                    <label class="upload-box">
+                        <input type="file" id="followingFile" accept=".json" hidden>
+                        <span class="file-text" id="followingText">
+                            Pilih file following
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+
+            <button id="compareBtn" class="compare-btn">
+                Compare
+            </button>
+        </div>
+    </section>
+
+    <section class="table-section" id="tablePage" hidden>
+        <h1>Table Result</h1>
+        <div class="table-wrapper">
+            <div class="table-card">
+                <h2>Not Following You Back</h2>
+                <table id="notFollowBackTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="table-card">
+                <h2>You Are Not Following Back</h2>
+                <table id="youNotFollowBackTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <div id="footer-section"></div>
+
     <script type="module" src="assets/js/main.js"></script>
+</body>
+
 </html>

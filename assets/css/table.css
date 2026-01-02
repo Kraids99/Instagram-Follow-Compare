@@ -1,0 +1,58 @@
+.table-section {
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.table-wrapper {
+    display: flex;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.table-card {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.table-card h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #E1306C;
+    /* merah Instagram */
+    color: white;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background-color: #fafafa;
+}
+
+th:first-child,
+td:first-child {
+    width: 50px;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .table-wrapper {
+        flex-direction: column;
+    }
+}
